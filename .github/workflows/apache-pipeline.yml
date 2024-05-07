@@ -1,0 +1,49 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build-angular-app:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository on the virtual machine
+        uses: actions/checkout@v4
+      - name: Use Node.js version 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: "npm"
+      - name: Install dependencies
+        run: npm install
+      - name: Build Angular App
+        run: npm run build
+      - name: upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: angular-build
+          path: "./dist/"
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build-angular-app
+    steps:
+      - name: download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: angular-build
+          path: "./dist/"
+      - name: Sync folders and files to the server
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          local-dir: ./dist/angular-app/browser/
+          server-dir: /pipeline.gutov.net/
