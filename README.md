@@ -1,7 +1,26 @@
-# AngularApp
+# Table of contents
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
+- [Front-End](#front-end)
+- [Back-End](#back-end)
+- [DataBase](#database)
+- [DevOps](#devops)
 
-## Build and Deploy
+## Technologies used
 
-It is build and deployed using GitHub Actions pipeline.
+### Front-End
+
+- This project was generated with Angular CLI ver. 17+
+
+- Styling created with Bootstrap ver. 5+ and Angualr Material ver. 17+
+
+### Back-End
+
+- Node.js server hosted on Apache HTTP Server
+
+### DataBase
+
+- MySql
+
+### DevOps
+
+- CI/CD workflow: GitHub Actions
