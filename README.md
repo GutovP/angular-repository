@@ -1,19 +1,26 @@
-# Technologies used
+# Table of contents
 
-## Front-End
+- [Front-End](#front-end)
+- [Back-End](#back-end)
+- [DataBase](#database)
+- [DevOps](#devops)
 
-This project was generated with Angular CLI ver. 17+
+## Technologies used
 
-Styling created with Bootstrap ver. 5+ and Angualr Material ver. 17+
+### Front-End
 
-## Back-End
+- This project was generated with Angular CLI ver. 17+
 
-Node.js server hosted on Apache HTTP Server
+- Styling created with Bootstrap ver. 5+ and Angualr Material ver. 17+
 
-## DataBase
+### Back-End
 
-MySql
+- Node.js server hosted on Apache HTTP Server
 
-## DevOps
+### DataBase
 
-CI/CD workflow: GitHub Actions
+- MySql
+
+### DevOps
+
+- CI/CD workflow: GitHub Actions
