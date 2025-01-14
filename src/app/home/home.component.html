@@ -7,8 +7,9 @@
             aria-controls="pills-about" aria-selected="true">About me</button>
     </li>
     <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" role="tab"
-            aria-controls="pills-profile" aria-selected="false">My profile</button>
+        <button mat-button (click)="typeWriter()" class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+            data-bs-target="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">My
+            profile</button>
     </li>
     <li class="nav-item" role="presentation">
         <button class="nav-link" id="pills-email-tab" data-bs-toggle="pill" data-bs-target="#pills-email" role="tab"
@@ -22,7 +23,11 @@
         <h4 class="fadeInAnimated" id="second">I'm Petar</h4>
         <h4 class="fadeInAnimated" id="third">I'm a Front-End Web Developer</h4>
     </div>
-    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">Profile</div>
+
+    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+        <p class="demo"></p>
+    </div>
+
     <div class="tab-pane fade pt-5 " id="pills-email" role="tabpanel" aria-labelledby="pills-email-tab">
         <a class="text-danger" href="mailto:petar@gutov.net">
             <h4>petar&#64;gutov.net</h4>
