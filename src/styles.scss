@@ -38,12 +38,52 @@ $angular-app-theme: mat.define-light-theme(
 
 /* You can add global styles to this file, and also import other style files */
 
-html,
-body {
-  height: 100%;
-  width: 100%;
-}
-body {
+// RESET
+* {
+  padding: 0;
   margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// Typography
+
+html {
+  font-size: clamp(11px, 2vw, 16px);
+  line-height: 1.4;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body,
+input,
+select,
+textarea,
+table,
+button {
+  font: inherit;
+}
+
+p {
+  padding-bottom: 1.5em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  margin-top: 1em;
+  margin-bottom: 0.7em;
+  font-weight: bold;
+  border-bottom: 0.2rem solid black;
 }
