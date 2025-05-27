@@ -4,11 +4,8 @@ import { TypewriterComponent } from '../core/typewriter/typewriter.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [TypewriterComponent],
+  imports: [],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
 })
-export class HomeComponent extends TypewriterComponent {
-
-
-}
+export class HomeComponent extends TypewriterComponent {}
