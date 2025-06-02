@@ -24,23 +24,6 @@ h4 {
   font-weight: 600;
 }
 
-.carousel {
-  width: 25vh;
-  bottom: 6%;
-}
-
-.carousel-item img {
-  object-fit: contain;
-  object-position: center;
-  height: 20vh;
-  overflow: hidden;
-}
-
-.carousel-item {
-  transition: transform 0s ease-in-out;
-}
-
-.carousel-fade .active.carousel-item-start,
-.carousel-fade .active.carousel-item-end {
-  transition: opacity 2s 0s;
+.my-text-color {
+  color: #000080;
 }
