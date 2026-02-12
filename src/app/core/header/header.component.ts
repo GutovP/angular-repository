@@ -48,7 +48,7 @@ export class HeaderComponent implements OnInit {
     ];
   }
 
-  $clock = interval(1000).pipe(
+  clock$ = interval(1000).pipe(
     map(() => new Date())
   );
 
