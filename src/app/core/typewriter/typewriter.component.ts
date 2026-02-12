@@ -11,7 +11,7 @@ import { repeat } from 'rxjs';
 export class TypewriterComponent {
 
   private i: number = 0;
-  public text: string = 'Lorem ipsum dummy text blabla.';
+  public text: string = 'Read my CV for more :)';
   private speed: number = 50;
 
   typeWriter() {
